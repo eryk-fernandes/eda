@@ -19,6 +19,21 @@ public class PilhaLigada {
 
     public void pop() {
 
+        if (isVazio()) {
+            System.out.println("Lista vazia");
+            return;
+        }
+
+        topo = topo.getProximo();
+    }
+
+    public void imprimir() {
+        No aux = topo;
+
+        while (aux != null) {
+            System.out.print(aux.getDado() + " ");
+            aux = aux.getProximo();
+        }
     }
 
     public boolean isVazio() {
