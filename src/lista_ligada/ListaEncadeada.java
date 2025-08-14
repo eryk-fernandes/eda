@@ -1,6 +1,6 @@
 package lista_ligada;
 
-public class ListaLigada {
+public class ListaEncadeada implements Lista {
 
     No inicio;
 
@@ -50,7 +50,11 @@ public class ListaLigada {
 
         no.setProximo(aux.getProximo());
         aux.setProximo(no);
+    }
 
+    @Override
+    public int buscar(int dado) {
+        return -1;
     }
 
     public void remover(int pos) {

@@ -3,7 +3,7 @@ package pilha;
 public class Main {
     public static void main(String[] args) {
 
-        PilhaLigada pilha = new PilhaLigada();
+        PilhaEncadeada pilha = new PilhaEncadeada();
 
         pilha.push(2);
         pilha.push(3);

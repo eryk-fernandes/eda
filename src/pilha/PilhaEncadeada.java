@@ -1,8 +1,6 @@
 package pilha;
 
-import org.w3c.dom.ls.LSOutput;
-
-public class PilhaLigada {
+public class PilhaEncadeada implements Pilha {
 
     No topo;
 
