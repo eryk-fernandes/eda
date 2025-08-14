@@ -1,5 +1,7 @@
 package pilha;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class PilhaLigada {
 
     No topo;
@@ -34,6 +36,18 @@ public class PilhaLigada {
             System.out.print(aux.getDado() + " ");
             aux = aux.getProximo();
         }
+    }
+
+    public void imprimirInversa() {
+        imprimirInversaRecursiva(topo);
+    }
+
+    private void imprimirInversaRecursiva(No topo) {
+        if (topo == null) {
+            return;
+        }
+        imprimirInversaRecursiva(topo.getProximo());
+        System.out.print(topo.getDado());
     }
 
     public boolean isVazio() {
