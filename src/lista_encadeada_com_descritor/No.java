@@ -1,4 +1,4 @@
-package fila;
+package lista_encadeada_com_descritor;
 
 public class No {
 

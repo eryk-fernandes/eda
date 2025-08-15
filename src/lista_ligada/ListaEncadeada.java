@@ -112,7 +112,7 @@ public class ListaEncadeada implements Lista {
 
         No aux = inicio;
 
-        for (int i = 0; i < quantidade() - 1; i++) {
+        for (int i = 0; i < quantidade() - 2; i++) {
             aux = aux.getProximo();
         }
 

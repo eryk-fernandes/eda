@@ -45,7 +45,7 @@ public class PilhaEncadeada implements Pilha {
             return;
         }
         imprimirInversaRecursiva(topo.getProximo());
-        System.out.print(topo.getDado());
+        System.out.print(topo.getDado() + " ");
     }
 
     public boolean isVazio() {

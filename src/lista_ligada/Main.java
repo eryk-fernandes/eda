@@ -10,6 +10,7 @@ public class Main {
         listaEncadeada.inserirNoFinal(5);
         listaEncadeada.inserirNoFinal(7);
         listaEncadeada.inserirNoFinal(11);
+        listaEncadeada.removerNoFinal();
 
         listaEncadeada.imprimir();
 

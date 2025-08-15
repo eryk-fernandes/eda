@@ -1,4 +1,4 @@
-package fila;
+package fila_encadeada;
 
 public class FilaEncadeada implements Fila {
 
