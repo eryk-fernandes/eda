@@ -22,6 +22,19 @@ public class ListaEncadeada implements Lista {
         aux.setProximo(no);
     }
 
+    @Override
+    public void inserirNoInicio(int dado) {
+        No no = new No(dado);
+
+        if (isVazio()) {
+            inicio = no;
+            return;
+        }
+
+        no.setProximo(inicio);
+        inicio = no;
+    }
+
     public void inserir(int dado, int pos) {
 
         if (pos < 0 || pos > quantidade() - 1) {
@@ -54,6 +67,21 @@ public class ListaEncadeada implements Lista {
 
     @Override
     public int buscar(int dado) {
+
+        if (isVazio()) {
+            System.out.println("Lista vazia");
+            return -1;
+        }
+
+        No aux = inicio;
+
+        for (int i = 0; i < quantidade(); i++) {
+            if (aux.getDado() == dado) {
+                return i;
+            }
+            aux = aux.getProximo();
+        }
+
         return -1;
     }
 
@@ -69,6 +97,33 @@ public class ListaEncadeada implements Lista {
         }
 
         aux.setProximo(null);
+    }
+
+    @Override
+    public void removerNoFinal() {
+
+        if (isVazio()) {
+            System.out.println("Lista vazia");
+            return;
+        }
+
+        No aux = inicio;
+
+        for (int i = 0; i < quantidade() - 1; i++) {
+            aux = aux.getProximo();
+        }
+
+        aux.setProximo(null);
+    }
+
+    @Override
+    public void removerNoInicio() {
+        if (isVazio()) {
+            System.out.println("Lista vazia");
+            return;
+        }
+
+        inicio = inicio.getProximo();
     }
 
     public void imprimir() {
