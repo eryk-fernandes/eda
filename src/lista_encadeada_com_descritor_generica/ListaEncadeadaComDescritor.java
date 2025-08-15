@@ -1,22 +1,22 @@
-package lista_encadeada_com_descritor;
+package lista_encadeada_com_descritor_generica;
 
-public class ListaEncadeadaComDescritor implements Lista {
+public class ListaEncadeadaComDescritor<T> implements Lista {
 
-    private Descritor descritor;
+    private Descritor<T> descritor;
 
     public ListaEncadeadaComDescritor() {
-        descritor = new Descritor();
+        descritor = new Descritor<>();
     }
 
     public int getTamanhoDescritor() {
         return descritor.tamanho;
     }
 
-    public int getInicioDescritor() {
+    public T getInicioDescritor() {
         return descritor.inicio.getDado();
     }
 
-    public int getFimDescritor() {
+    public T getFimDescritor() {
         return descritor.fim.getDado();
     }
 
@@ -32,13 +32,7 @@ public class ListaEncadeadaComDescritor implements Lista {
             return;
         }
 
-        No aux = descritor.inicio;
-
-        while (aux.getProximo() != null) {
-            aux = aux.getProximo();
-        }
-
-        aux.setProximo(no);
+        descritor.fim.setProximo(no);
         descritor.fim = no;
         descritor.tamanho++;
     }
@@ -55,7 +49,6 @@ public class ListaEncadeadaComDescritor implements Lista {
 
         for (int i = 0; i < descritor.tamanho - 2; i++) {
             aux = aux.getProximo();
-            System.out.println("NO : " + aux.getDado());
         }
 
         aux.setProximo(null);

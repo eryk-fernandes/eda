@@ -1,4 +1,4 @@
-package lista_encadeada_com_descritor;
+package lista_encadeada_com_descritor_generica;
 
 public interface Lista {
 
