@@ -4,6 +4,7 @@ public class ListaEncadeada implements Lista {
 
     No inicio;
 
+    @Override
     public void inserirNoFinal(int dado) {
 
         No no = new No(dado);
@@ -35,6 +36,7 @@ public class ListaEncadeada implements Lista {
         inicio = no;
     }
 
+    @Override
     public void inserir(int dado, int pos) {
 
         if (pos < 0 || pos > quantidade() - 1) {
@@ -85,6 +87,7 @@ public class ListaEncadeada implements Lista {
         return -1;
     }
 
+    @Override
     public void remover(int pos) {
         if (isVazio()) {
             System.out.println("Lista vazia");
@@ -126,6 +129,7 @@ public class ListaEncadeada implements Lista {
         inicio = inicio.getProximo();
     }
 
+    @Override
     public void imprimir() {
         if (isVazio()) {
             System.out.println("Lista vazia");
@@ -140,6 +144,7 @@ public class ListaEncadeada implements Lista {
         }
     }
 
+    @Override
     public int quantidade() {
         No aux = inicio;
 
@@ -153,6 +158,7 @@ public class ListaEncadeada implements Lista {
         return quantidade;
     }
 
+    @Override
     public boolean isVazio() {
         return inicio == null;
     }

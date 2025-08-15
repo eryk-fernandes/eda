@@ -2,7 +2,7 @@ package pilha;
 
 public class PilhaEncadeada implements Pilha {
 
-    No topo;
+    private No topo;
 
     public void push(int dado) {
 

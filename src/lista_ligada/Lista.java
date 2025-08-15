@@ -10,4 +10,6 @@ public interface Lista {
     void removerNoInicio();
     boolean isVazio();
     int buscar(int dado);
+    int quantidade();
+    void imprimir();
 }

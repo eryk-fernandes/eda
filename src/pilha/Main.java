@@ -8,6 +8,7 @@ public class Main {
         pilha.push(2);
         pilha.push(3);
         pilha.push(6);
+        pilha.pop();
         pilha.imprimir();
         System.out.println();
         pilha.imprimirInversa();

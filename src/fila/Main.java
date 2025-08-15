@@ -1,23 +1,31 @@
 package fila;
 
-import lista_ligada.ListaEncadeada;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        ListaEncadeada listaEncadeada = new ListaEncadeada();
+        Fila fila = new FilaEncadeada();
 
-        listaEncadeada.inserirNoFinal(2);
-        listaEncadeada.inserirNoFinal(3);
-        listaEncadeada.inserirNoFinal(5);
-        listaEncadeada.inserirNoFinal(7);
-        listaEncadeada.inserirNoFinal(11);
+        fila.inserir(2);
+        fila.inserir(3);
+        fila.inserir(5);
 
-        listaEncadeada.inserir(1, 4);
+        fila.imprimir();
+        System.out.println();
 
-        listaEncadeada.imprimir();
+        fila.remover();
 
+        fila.imprimir();
+        System.out.println();
+
+        fila.inserir(7);
+        fila.inserir(11);
+        fila.inserir(13);
+
+        fila.imprimir();
+        System.out.println();
+
+        fila.remover();
+
+        fila.imprimir();
     }
 }
